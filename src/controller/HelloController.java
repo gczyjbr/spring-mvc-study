@@ -31,4 +31,10 @@ public class HelloController {
     mav.addObject("message", "Hello World");
     return mav;
   }
+  
+  @RequestMapping("/helloWorld")
+  public ModelAndView helloWorld() {
+    ModelAndView mav = new ModelAndView("redirect:/hello");
+    return mav;
+  }
 }
